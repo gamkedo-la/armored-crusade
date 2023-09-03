@@ -22,35 +22,43 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            TakeDamage();
+        }
     }
     private void OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.gameObject.layer == LayerMask.NameToLayer("Ouch"))
         {
-            audioSource.PlayOneShot(explosion);
+            TakeDamage();
+        }
+    }
+
+    void TakeDamage()
+    {
+        audioSource.PlayOneShot(explosion);
 
 
-            health--;
-            if (health == 2)
-            {
-                StartCoroutine(DamageOverlay_Short());
-                healthHUD.color = new Color32(204, 207, 62, 255);
-                healthHUD.text = "██";
-            }
-            if (health == 1)
-            {
-                StartCoroutine(DamageOverlay_Short());
-                healthHUD.color = new Color32(207, 104, 81, 255);
-                healthHUD.text = "█";
-            }
-            if (health == 0)
-            {
-                StartCoroutine(LoadSceneWithDelay());
-                StartCoroutine(DamageOverlay_Long());
-                Instantiate(explosionPrefab_Generic, collisionInfo.gameObject.transform.position, Quaternion.identity);
-                player.transform.position = new Vector3(player.transform.position.x, -500, player.transform.position.z);
-            }
+        health--;
+        if (health == 2)
+        {
+            StartCoroutine(DamageOverlay_Short());
+            healthHUD.color = new Color32(204, 207, 62, 255);
+            healthHUD.text = "██";
+        }
+        if (health == 1)
+        {
+            StartCoroutine(DamageOverlay_Short());
+            healthHUD.color = new Color32(207, 104, 81, 255);
+            healthHUD.text = "█";
+        }
+        if (health == 0)
+        {
+            StartCoroutine(LoadSceneWithDelay());
+            StartCoroutine(DamageOverlay_Long());
+            Instantiate(explosionPrefab_Generic, player.transform.position, Quaternion.identity);
+            player.transform.position = new Vector3(player.transform.position.x, -500, player.transform.position.z);
         }
     }
 

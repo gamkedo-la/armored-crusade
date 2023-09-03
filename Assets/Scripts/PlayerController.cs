@@ -33,6 +33,11 @@ public class PlayerController : MonoBehaviour
         tankRollingSound = gameObject.GetComponent<AudioSource>();
     }
 
+    public static void ResetTime()
+    {
+        playerTime = 0;
+    }
+
     string formatTime(float timeInSeconds)
     {
         int timeInSecondsInt = (int)timeInSeconds;

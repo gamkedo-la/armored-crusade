@@ -9,7 +9,10 @@ public class GameOver : MonoBehaviour
 
     private void Update()
     {
-        Timer.text = "TIMER\n<mspace=.75em>" + PlayerController.datTime;
+        if(Timer)
+        {
+            Timer.text = "TIMER\n<mspace=.75em>" + PlayerController.datTime;
+        }
     }
     public void btn_Home(int sceneID)
     {
@@ -23,6 +26,7 @@ public class GameOver : MonoBehaviour
 
     public void OnServerInitialized(int sceneID)
     {
+        PlayerController.ResetTime();
         SpawnManager.wave2 = false;
         SpawnManager.wave3 = false;
         SpawnManager.wave4 = false;
