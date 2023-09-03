@@ -7,6 +7,11 @@ public class GameOver : MonoBehaviour
 {
     public TextMeshProUGUI Timer;
 
+    private void Start()
+    {
+        Cursor.visible = true;
+    }
+
     private void Update()
     {
         if(Timer)
