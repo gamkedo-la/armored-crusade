@@ -103,7 +103,6 @@ MonoBehaviour:
   explosionPrefab_Mechoid: {fileID: 1953017572017508349, guid: 10e32f5326c163a45bbd92efef026aa5, type: 3}
   explosionPrefab_Wheelstinger: {fileID: 1953017572017508349, guid: aec96a76e62a16041a4f2eadcb2e4e78, type: 3}
   explosionPrefab_Generic: {fileID: 1953017572017508349, guid: 444086b755e000a459ef6a88fb38bb25, type: 3}
-  forcefield: {fileID: 2149385252805536433, guid: dbc64f6b28c8a664187fb92f6ac7a7e9, type: 3}
   explosionEnemy: {fileID: 8300000, guid: 364ed95d46b7ca246ae8867c1d7ad11c, type: 3}
 --- !u!54 &4349530638313116272
 Rigidbody:
