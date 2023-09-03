@@ -51,7 +51,8 @@ public class SpawnManager : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
 
-        InvokeRepeating("spawnMechoid_1", 0f, 2f);
+        //InvokeRepeating("spawnMechoid_1", 0f, 2f);
+        InvokeRepeating("spawnShieldPowerup", 0f, 2f);
 
         lbl_wave2.gameObject.SetActive(false);
         lbl_wave3.gameObject.SetActive(false);

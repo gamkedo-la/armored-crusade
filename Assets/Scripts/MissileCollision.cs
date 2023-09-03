@@ -20,7 +20,7 @@ public class MissileCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collisionInfo)
     {
-        if (collisionInfo.gameObject.CompareTag("Mechoid"))
+        if (collisionInfo.gameObject.CompareTag("Mechoid_1"))
         {
             audioSource.PlayOneShot(explosionEnemy);
             Score.playerScore = Score.playerScore + 50;
@@ -33,7 +33,7 @@ public class MissileCollision : MonoBehaviour
         if (collisionInfo.gameObject.CompareTag("Wheelstinger"))
         {
             audioSource.PlayOneShot(explosionEnemy);
-            Score.playerScore = Score.playerScore + 50;
+            Score.playerScore = Score.playerScore + 100;
             Vector3 newPosition = collisionInfo.gameObject.transform.position;
             Instantiate(explosionPrefab_Wheelstinger, newPosition, Quaternion.identity);
             Destroy(collisionInfo.transform.gameObject);
@@ -41,10 +41,20 @@ public class MissileCollision : MonoBehaviour
         if (collisionInfo.gameObject.CompareTag("Beetlebomber"))
         {
             audioSource.PlayOneShot(explosionEnemy);
-            Score.playerScore = Score.playerScore + 200;
+            Score.playerScore = Score.playerScore + 150;
             Vector3 newPosition = collisionInfo.gameObject.transform.position;
             Instantiate(explosionPrefab_Beetlebomber, newPosition, Quaternion.identity);
             Destroy(collisionInfo.transform.gameObject);
+        }
+        if (collisionInfo.gameObject.CompareTag("Mechoid_2"))
+        {
+            audioSource.PlayOneShot(explosionEnemy);
+            Score.playerScore = Score.playerScore + 200;
+            Vector3 newPosition = collisionInfo.gameObject.transform.position;
+            newPosition.y += 30f;
+            newPosition.z += 30f;
+            Instantiate(explosionPrefab_Mechoid, newPosition, Quaternion.identity);
+            Destroy(collisionInfo.transform.parent.gameObject);
         }
         if (collisionInfo.gameObject.layer == LayerMask.NameToLayer("Generic"))
         {
