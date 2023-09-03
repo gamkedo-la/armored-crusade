@@ -502,6 +502,7 @@ MonoBehaviour:
   forwardSound: {fileID: 8300000, guid: e52bb1552ad594e7d8398dcbcda4f9aa, type: 3}
   backwardSound: {fileID: 8300000, guid: d576ae3928a334852b79822167eadb6c, type: 3}
   TheCreditsScreen: {fileID: 1941043797}
+  highScoreText: {fileID: 122123973}
 --- !u!82 &127907885
 AudioSource:
   m_ObjectHideFlags: 0

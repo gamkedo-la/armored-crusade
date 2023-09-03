@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+
 
 public class StartScreen : MonoBehaviour
 {
@@ -11,9 +13,18 @@ public class StartScreen : MonoBehaviour
 
     public GameObject TheCreditsScreen;
 
+    public TextMeshProUGUI highScoreText;
+
+    public static int highScore;
+
     void Start()
     {
         menuSoundSource = gameObject.GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
+        if (highScoreText) highScoreText.text = " SCORE\n<mspace=.75em>" + highScore.ToString("000000");
     }
 
     public void LoadScene(int sceneID)
