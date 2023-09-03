@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - DestroyMe
+  - Mechoid
+  - Enemy_Projectile
+  - Health
+  - Wheelstinger
+  - Player_Bottom
+  - Target
+  - Missile
+  - Beetlebomber
+  - Rock
+  - Shield
+  - Forcefield
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Environment
+  - Water
+  - UI
+  - Ouch
+  - Generic
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
