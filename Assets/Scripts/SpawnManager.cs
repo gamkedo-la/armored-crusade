@@ -85,6 +85,11 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.J))
+        {
+            Score.playerScore = Score.playerScore + 501;
+        }
+
         if (Score.playerScore >= 300 && !wave2)
         {
             audioSource.PlayOneShot(wave);
