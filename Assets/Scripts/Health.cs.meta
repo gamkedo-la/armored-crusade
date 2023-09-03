@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3aab872cebdc82d43a472a17fa15d0cd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - healthHUD: {instanceID: 0}
+  - damage: {instanceID: 0}
+  - explosionPrefab_Generic: {instanceID: 0}
+  - player: {instanceID: 0}
+  - projectile: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - explosion: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
